@@ -32,9 +32,9 @@ Then, use the `composer` command to install required vendors:
 
 You have to add all the twitter key needed for OAuth configuration with this command
 
-    mv src/LCQD/TwitterAnalytics/Resources/config/config.yml-dist src/LCQD/TwitterAnalytics/Resources/config/config.yml
+    cp src/LCQD/TwitterAnalytics/Resources/config/config.yml-dist src/LCQD/TwitterAnalytics/Resources/config/config.yml
 
-Then add you parameters key in the new generetaed file.
+Then add you parameters key in the new generated file.
 
 3) Launching Application
 --------------------------------
