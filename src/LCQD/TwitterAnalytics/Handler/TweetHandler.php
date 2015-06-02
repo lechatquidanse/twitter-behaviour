@@ -1,10 +1,27 @@
 <?php
 
+/**
+ * This file is part of the TwitterAnalytics package.
+ *
+ * (c) lechatquidanse
+ *
+ * For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
+ */
+
 namespace LCQD\TwitterAnalytics\Handler;
 
 use LCQD\TwitterAnalytics\Client\TwitterClient;
 use LCQD\TwitterAnalytics\Common\SearchTweetsApi;
 
+/**
+ * TweetHandler
+ *
+ * Handler that can analyze twitter api response from http call
+ *
+ * @package TwitterAnalytics
+ * @author lechatquidanse
+ */
 class TweetHandler
 {
     /**

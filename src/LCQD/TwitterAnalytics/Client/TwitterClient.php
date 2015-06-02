@@ -1,5 +1,14 @@
 <?php
 
+/**
+ * This file is part of the TwitterAnalytics package.
+ *
+ * (c) lechatquidanse
+ *
+ * For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
+ */
+
 namespace LCQD\TwitterAnalytics\Client;
 
 use GuzzleHttp\Client;
@@ -9,11 +18,17 @@ use GuzzleHttp\Message\ResponseInterface;
 use GuzzleHttp\Subscriber\Oauth\Oauth1;
 use Monolog\Logger;
 
+/**
+ * TwitterClient
+ *
+ * @package TwitterAnalytics
+ * @author lechatquidanse
+ */
 class TwitterClient
 {
     /**
      * Base Url
-     * 
+     *
      * @var string
      */
     protected $baseUrl = 'https://api.twitter.com/1.1/';
@@ -22,28 +37,28 @@ class TwitterClient
      * Client
      *
      * HTTP client that send HTTP requests
-     * 
+     *
      * @var GuzzleHttp\Client $client
      */
     protected $client;
 
     /**
      * Oauth
-     * 
+     *
      * @var GuzzleHttp\Subscriber\Oauth\Oauth1 $oauth
      */
     protected $oauth;
 
     /**
      * Oauth Configs
-     * 
+     *
      * @var array
      */
     protected $oauthConfigs = array();
 
     /**
      * Logger
-     * 
+     *
      * @var Monolog\Logger $logger
      */
     protected $logger;
@@ -58,7 +73,7 @@ class TwitterClient
 
     /**
      * Get
-     * 
+     *
      * Send a GET request
      *
      * @param string|array|Url $url     URL or URI template
@@ -88,7 +103,7 @@ class TwitterClient
      * Init Client
      *
      * Set Client for Twitter Api With Oauth
-     * 
+     *
      * @return void
      */
     public function initClient(array $oauthConfigs = null)
@@ -119,7 +134,7 @@ class TwitterClient
 
     /**
      * Get Client
-     * 
+     *
      * @return ClientInterface
      */
     public function getClient()
@@ -142,7 +157,7 @@ class TwitterClient
 
     /**
      * Get Oauth
-     * 
+     *
      * @return Oauth1
      */
     public function getOauth()
@@ -170,7 +185,7 @@ class TwitterClient
 
     /**
      * Get Oauth
-     * 
+     *
      * @return array
      */
     public function getOauthConfigs()

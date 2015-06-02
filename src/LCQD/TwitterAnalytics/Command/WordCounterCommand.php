@@ -1,5 +1,14 @@
 <?php
 
+/**
+ * This file is part of the TwitterAnalytics package.
+ *
+ * (c) lechatquidanse
+ *
+ * For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
+ */
+
 namespace LCQD\TwitterAnalytics\Command;
 
 use LCQD\TwitterAnalytics\Client\TwitterClient;
@@ -12,8 +21,17 @@ use Symfony\Component\Console\Output\OutputInterface;
 use Symfony\Component\Yaml\Parser;
 use Symfony\Component\Yaml\Exception\ParseException;
 
+/**
+ * TwitterClient
+ *
+ * @package TwitterAnalytics
+ * @author lechatquidanse
+ */
 class WordCounterCommand extends Command
 {
+    /**
+     * {@inheritdoc}
+     */
     protected function configure()
     {
         $this
@@ -27,6 +45,9 @@ class WordCounterCommand extends Command
         ;
     }
 
+    /**
+     * {@inheritdoc}
+     */
     protected function execute(InputInterface $input, OutputInterface $output)
     {
         $configFile = __DIR__ . '/../Resources/config/config.yml';

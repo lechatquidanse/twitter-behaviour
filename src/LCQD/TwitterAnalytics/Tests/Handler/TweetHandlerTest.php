@@ -1,16 +1,39 @@
 <?php
 
+/**
+ * This file is part of the TwitterAnalytics package.
+ *
+ * (c) lechatquidanse
+ *
+ * For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
+ */
+
 namespace LCQD\TwitterAnalytics\Tests\Handler;
 
 use LCQD\TwitterAnalytics\Handler\TweetHandler;
 
+/**
+ * TweetHandlerTest
+ *
+ * @package default
+ * @author lechatquidanse
+ */
 class TweetHandlerTest extends \PHPUnit_Framework_TestCase
 {
+    /**
+     * createTweetHandler
+     *
+     * @return TweetHandler
+     */
     protected function createTweetHandler()
     {
         return new TweetHandler();
     }
     
+    /**
+     * testGetKeyWordsFromTweet
+     */
     public function testGetKeyWordsFromTweet()
     {
         $tweet = array('text' => 'Un essai d\'un test getKeyWordsFromTweet @phpunit');
@@ -21,7 +44,10 @@ class TweetHandlerTest extends \PHPUnit_Framework_TestCase
 
         $this->assertEquals($keyWordsExpecteds, $keyWordsFromTweet);
     }
-
+    
+    /**
+     * testCountWordsRepeaterInTweets
+     */
     public function testCountWordsRepeaterInTweets()
     {
         $tweets = array(
