@@ -11,8 +11,8 @@
 !var/logs/.gitkeep
 
 # Parameters
+/src/LCQD/TwitterAnalytics/Resources/config/config.yml
 /app/config/parameters.yml
-/app/config/parameters.ini
 
 # Managed by Composer
 /app/bootstrap.php.cache
@@ -35,3 +35,5 @@
 
 # Composer PHAR
 /composer.phar
+
+.DS_Store
