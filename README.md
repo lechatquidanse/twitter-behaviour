@@ -27,7 +27,16 @@ Then, use the `composer` command to install required vendors:
 
     php composer.phar install
 
-2) Launching Application
+2) Configuration
+--------------------------------
+
+You have to add all the twitter key needed for OAuth configuration with this command
+
+    mv src/LCQD/TwitterAnalytics/Resources/config/config.yml-dist src/LCQD/TwitterAnalytics/Resources/config/config.yml
+
+Then add you parameters key in the new generetaed file.
+
+3) Launching Application
 --------------------------------
 
 Congratulations! You're now ready to use the API:
@@ -36,7 +45,7 @@ Congratulations! You're now ready to use the API:
 
 With account_name is the account you want to analyze.
 
-3) Testing Application
+4) Testing Application
 --------------------------------
 
 You can launch UnitTests with this command:
