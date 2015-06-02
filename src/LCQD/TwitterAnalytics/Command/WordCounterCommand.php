@@ -43,7 +43,7 @@ class WordCounterCommand extends Command
             $tweetHandler = new TweetHandler();
             $tweetHandler->setClient($client);
 
-            $account = $input->getArgument('account') ? $input->getArgument('name') : 'secretsales';
+            $account = $input->getArgument('account') ? $input->getArgument('account') : 'secretsales';
             $wordsRepeater = $tweetHandler->wordsRepeaterFrom($account, 100);
             
             foreach ($wordsRepeater as $word => $count) {
